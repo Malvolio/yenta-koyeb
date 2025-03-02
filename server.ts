@@ -7,6 +7,6 @@ console.log(
 Bun.serve({
   port: port,
   fetch(_request) {
-    return new Response("Hello from Koyeb");
+    return new Response(`Hello from Koyeb: ${process.env.DATABASE_PASSWORD}`);
   },
 });
